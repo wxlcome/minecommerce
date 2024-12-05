@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wxl.cloud.miniecommerce.storage.mapper.WarehouseMapper">
+
+    <resultMap type="com.wxl.cloud.miniecommerce.model.entity.storage.Warehouse" id="WarehouseMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="name" column="name" jdbcType="VARCHAR"/>
+        <result property="provinceId" column="province_id" jdbcType="INTEGER"/>
+        <result property="provinceName" column="province_name" jdbcType="VARCHAR"/>
+        <result property="cityId" column="city_id" jdbcType="INTEGER"/>
+        <result property="cityName" column="city_name" jdbcType="VARCHAR"/>
+        <result property="districtId" column="district_id" jdbcType="INTEGER"/>
+        <result property="districtName" column="district_name" jdbcType="VARCHAR"/>
+        <result property="detailAddress" column="detail_address" jdbcType="VARCHAR"/>
+        <result property="longitude" column="longitude" jdbcType="VARCHAR"/>
+        <result property="latitude" column="latitude" jdbcType="VARCHAR"/>
+        <result property="phone" column="phone" jdbcType="VARCHAR"/>
+        <result property="remark" column="remark" jdbcType="VARCHAR"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+</mapper>
+

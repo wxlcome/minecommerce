@@ -22,6 +22,8 @@
         <module>goods-server</module>
         <!--订单服务-->
         <module>order-server</module>
+        <!--库存服务-->
+        <module>storage-server</module>
     </modules>
 
     <dependencies>
