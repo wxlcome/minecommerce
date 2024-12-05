@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wxl.cloud.miniecommerce.goods.mapper.GoodsMapper">
+
+    <resultMap type="com.wxl.cloud.miniecommerce.model.entity.goods.Goods" id="GoodsMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="goodsName" column="goods_name" jdbcType="VARCHAR"/>
+        <result property="description" column="description" jdbcType="VARCHAR"/>
+        <result property="goodsCode" column="goods_code" jdbcType="VARCHAR"/>
+        <result property="brandId" column="brand_id" jdbcType="INTEGER"/>
+        <result property="brandCnName" column="brand_cn_name" jdbcType="VARCHAR"/>
+        <result property="brandEnName" column="brand_en_name" jdbcType="VARCHAR"/>
+        <result property="categoryId" column="category_id" jdbcType="INTEGER"/>
+        <result property="categoryName" column="category_name" jdbcType="VARCHAR"/>
+        <result property="discount" column="discount" jdbcType="VARCHAR"/>
+        <result property="unit" column="unit" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+</mapper>
+
