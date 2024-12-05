@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wxl.cloud.miniecommerce.system.mapper.ExpressAddrMapper">
+
+    <resultMap type="com.wxl.cloud.miniecommerce.model.entity.system.ExpressAddr" id="ExpressAddrMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="expressInfoId" column="express_info_id" jdbcType="INTEGER"/>
+        <result property="senderName" column="sender_name" jdbcType="VARCHAR"/>
+        <result property="senderPhone" column="sender_phone" jdbcType="VARCHAR"/>
+        <result property="senderProvinceName" column="sender_province_name" jdbcType="VARCHAR"/>
+        <result property="senderCityName" column="sender_city_name" jdbcType="VARCHAR"/>
+        <result property="senderDistrictName" column="sender_district_name" jdbcType="VARCHAR"/>
+        <result property="senderDetailAddr" column="sender_detail_addr" jdbcType="VARCHAR"/>
+        <result property="receiverName" column="receiver_name" jdbcType="VARCHAR"/>
+        <result property="receiverPhone" column="receiver_phone" jdbcType="VARCHAR"/>
+        <result property="receiverProvinceName" column="receiver_province_name" jdbcType="VARCHAR"/>
+        <result property="receiverCityName" column="receiver_city_name" jdbcType="VARCHAR"/>
+        <result property="receiverDistrictName" column="receiver_district_name" jdbcType="VARCHAR"/>
+        <result property="receiverDetailAddr" column="receiver_detail_addr" jdbcType="VARCHAR"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+</mapper>
+

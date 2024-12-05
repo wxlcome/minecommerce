@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wxl.cloud.miniecommerce.system.mapper.ExpressInfoMapper">
+
+    <resultMap type="com.wxl.cloud.miniecommerce.model.entity.system.ExpressInfo" id="ExpressInfoMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="objectId" column="object_id" jdbcType="INTEGER"/>
+        <result property="expressNo" column="express_no" jdbcType="VARCHAR"/>
+        <result property="companyId" column="company_id" jdbcType="INTEGER"/>
+        <result property="companyName" column="company_name" jdbcType="VARCHAR"/>
+        <result property="companyCode" column="company_code" jdbcType="VARCHAR"/>
+        <result property="companyIcon" column="company_icon" jdbcType="VARCHAR"/>
+        <result property="expressType" column="express_type" jdbcType="INTEGER"/>
+        <result property="receiverAddrId" column="receiver_addr_id" jdbcType="INTEGER"/>
+        <result property="senderAddrId" column="sender_addr_id" jdbcType="INTEGER"/>
+        <result property="warehouseId" column="warehouse_id" jdbcType="INTEGER"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+</mapper>
+

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wxl.cloud.miniecommerce.system.mapper.ExpressCompanyMapper">
+
+    <resultMap type="com.wxl.cloud.miniecommerce.model.entity.system.ExpressCompany" id="ExpressCompanyMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="companyName" column="company_name" jdbcType="VARCHAR"/>
+        <result property="companyCode" column="company_code" jdbcType="VARCHAR"/>
+        <result property="companyIcon" column="company_icon" jdbcType="VARCHAR"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+</mapper>
+
