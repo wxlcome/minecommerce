@@ -24,6 +24,8 @@
         <module>order-server</module>
         <!--库存服务-->
         <module>storage-server</module>
+        <!--网关服务-->
+        <module>gateway-server</module>
     </modules>
 
     <dependencies>

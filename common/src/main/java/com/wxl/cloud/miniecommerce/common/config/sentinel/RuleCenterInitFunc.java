@@ -25,8 +25,8 @@ import java.util.Properties;
 
 
 /**
- * @ClassName  ：RuleCenterConfig
- * @description：规则中心发送配置
+ * @ClassName  ：RuleCenterInitFunc
+ * @description：规则中心初始化
  * @author     ：wxl
  * @date       ：2024/11/11 4:57
  */
