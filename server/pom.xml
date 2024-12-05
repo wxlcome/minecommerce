@@ -20,6 +20,8 @@
         <module>account-server</module>
         <!--商品服务-->
         <module>goods-server</module>
+        <!--订单服务-->
+        <module>order-server</module>
     </modules>
 
     <dependencies>

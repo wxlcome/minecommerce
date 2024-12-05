@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wxl.cloud.miniecommerce.order.mapper.OrderMapper">
+
+    <resultMap type="com.wxl.cloud.miniecommerce.model.entity.order.Order" id="OrderMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="accountId" column="account_id" jdbcType="INTEGER"/>
+        <result property="orderNo" column="order_no" jdbcType="VARCHAR"/>
+        <result property="delivery" column="delivery" jdbcType="VARCHAR"/>
+        <result property="reduction" column="reduction" jdbcType="VARCHAR"/>
+        <result property="subtotal" column="subtotal" jdbcType="VARCHAR"/>
+        <result property="total" column="total" jdbcType="VARCHAR"/>
+        <result property="paymethodId" column="paymethod_id" jdbcType="INTEGER"/>
+        <result property="paymethodName" column="paymethod_name" jdbcType="VARCHAR"/>
+        <result property="payTime" column="pay_time" jdbcType="TIMESTAMP"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+</mapper>
+
