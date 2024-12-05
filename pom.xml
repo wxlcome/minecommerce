@@ -24,6 +24,8 @@
         <module>model</module>
         <!--服务模块-->
         <module>server</module>
+        <!--web模块-->
+        <module>web</module>
     </modules>
 
     <!--    属性管理-->

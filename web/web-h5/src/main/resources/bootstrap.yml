@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: web-h5 #服务名称
+  cloud:
+    nacos: # nacos 注册和配置中心
+      server-addr: localhost:8848
+      username: nacos
+      password: WXLwxl0214
+      discovery:
+        group: MINI_ECOMMERCE
+        namespace: 9f14581e-8abd-4c47-8a9f-ca7801849a02
+      config:
+        group: MINI_ECOMMERCE
+        namespace: 9f14581e-8abd-4c47-8a9f-ca7801849a02
+        file-extension: yaml
+
+
+
+
