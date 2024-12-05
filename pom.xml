@@ -23,7 +23,7 @@
         <!--数据模型-->
         <module>model</module>
         <!--系统服务-->
-        <module>system</module>
+        <module>system-server</module>
     </modules>
 
     <!--    属性管理-->
