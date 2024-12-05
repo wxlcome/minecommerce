@@ -2,6 +2,8 @@ package com.wxl.cloud.miniecommerce.model.entity.system;
 
 import java.math.BigDecimal;
 import java.util.Date;
+
+import com.wxl.cloud.miniecommerce.model.entity.BaseEntity;
 import io.swagger.v3.oas.annotations.media.Schema;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.TableId;
