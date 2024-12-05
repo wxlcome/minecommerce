@@ -22,8 +22,8 @@
         <module>common</module>
         <!--数据模型-->
         <module>model</module>
-        <!--系统服务-->
-        <module>system-server</module>
+        <!--服务模块-->
+        <module>server</module>
     </modules>
 
     <!--    属性管理-->

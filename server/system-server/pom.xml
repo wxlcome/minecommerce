@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.wxl.cloud.miniecommerce</groupId>
-        <artifactId>miniecommerce</artifactId>
+        <artifactId>server</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
