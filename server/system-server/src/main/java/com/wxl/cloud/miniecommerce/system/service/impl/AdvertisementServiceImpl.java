@@ -1,7 +1,6 @@
 package com.wxl.cloud.miniecommerce.system.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.wxl.cloud.miniecommerce.model.entity.system.Advertisement;
 import com.wxl.cloud.miniecommerce.system.mapper.AdvertisementMapper;
 import com.wxl.cloud.miniecommerce.system.service.AdvertisementService;
 import org.springframework.stereotype.Service;
