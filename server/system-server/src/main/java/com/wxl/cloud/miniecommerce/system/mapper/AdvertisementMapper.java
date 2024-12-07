@@ -1,6 +1,7 @@
 package com.wxl.cloud.miniecommerce.system.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.wxl.cloud.miniecommerce.model.entity.system.Advertisement;
 import org.apache.ibatis.annotations.Mapper;
 
 
