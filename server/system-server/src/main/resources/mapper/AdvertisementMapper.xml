@@ -8,7 +8,9 @@
         <result property="goodsNo" column="goods_no" jdbcType="VARCHAR"/>
         <result property="goodsName" column="goods_name" jdbcType="VARCHAR"/>
         <result property="title" column="title" jdbcType="VARCHAR"/>
+        <result property="titleColor" column="title_color" jdbcType="VARCHAR"/>
         <result property="description" column="description" jdbcType="VARCHAR"/>
+        <result property="descriptionColor" column="description_color" jdbcType="VARCHAR"/>
         <result property="ideaImg" column="idea_img" jdbcType="VARCHAR"/>
         <result property="index" column="index" jdbcType="INTEGER"/>
         <result property="status" column="status" jdbcType="INTEGER"/>

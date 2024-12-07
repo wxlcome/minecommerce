@@ -15,7 +15,7 @@ import lombok.*;
  * @ClassName  ：Advertisement
  * @description：广告
  * @author     ：wxl
- * @date       ：2024/12/08 02:55
+ * @date       ：2024/12/08 05:34
  */
 @Data
 @AllArgsConstructor
@@ -24,7 +24,7 @@ import lombok.*;
 @Schema(name="Advertisement",description="广告")
 public class Advertisement extends BaseEntity {
 
-    private static final long serialVersionUID = -59870055312082513L;
+    private static final long serialVersionUID = -44816025154531714L;
 
     /**
      * 商品id
@@ -51,11 +51,23 @@ public class Advertisement extends BaseEntity {
     @Schema(name="title",description="标题")
     private String title;
     /**
+     * 标题颜色
+     */     
+    @TableField(value="title_color")
+    @Schema(name="titleColor",description="标题颜色")
+    private String titleColor;
+    /**
      * 描述
      */     
     @TableField(value="description")
     @Schema(name="description",description="描述")
     private String description;
+    /**
+     * 简介颜色
+     */     
+    @TableField(value="description_color")
+    @Schema(name="descriptionColor",description="简介颜色")
+    private String descriptionColor;
     /**
      * 概念图
      */     
@@ -74,6 +86,7 @@ public class Advertisement extends BaseEntity {
     @TableField(value="status")
     @Schema(name="status",description="状态（0-未上线，1-已上线）")
     private AdvertisementStatus status;
+
 
 }
 

@@ -1,6 +1,7 @@
 package com.wxl.cloud.miniecommerce.goods.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.wxl.cloud.miniecommerce.model.entity.goods.Goods;
 import org.apache.ibatis.annotations.Mapper;
 
 

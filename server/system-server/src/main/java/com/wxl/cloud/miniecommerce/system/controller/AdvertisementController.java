@@ -1,6 +1,7 @@
 package com.wxl.cloud.miniecommerce.system.controller;
 
 import com.wxl.cloud.miniecommerce.common.http.Result;
+import com.wxl.cloud.miniecommerce.model.entity.system.Advertisement;
 import com.wxl.cloud.miniecommerce.system.service.AdvertisementService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
