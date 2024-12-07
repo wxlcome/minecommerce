@@ -5,11 +5,13 @@
     <resultMap type="com.wxl.cloud.miniecommerce.model.entity.system.Advertisement" id="AdvertisementMap">
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="goodsId" column="goods_id" jdbcType="INTEGER"/>
+        <result property="goodsNo" column="goods_no" jdbcType="VARCHAR"/>
         <result property="goodsName" column="goods_name" jdbcType="VARCHAR"/>
         <result property="title" column="title" jdbcType="VARCHAR"/>
         <result property="description" column="description" jdbcType="VARCHAR"/>
         <result property="ideaImg" column="idea_img" jdbcType="VARCHAR"/>
         <result property="index" column="index" jdbcType="INTEGER"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
         <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
         <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
     </resultMap>

@@ -1,21 +1,22 @@
 package com.wxl.cloud.miniecommerce.model.entity.goods;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
+import java.math.BigDecimal;
+import java.util.Date;
+
 import com.wxl.cloud.miniecommerce.model.entity.BaseEntity;
 import com.wxl.cloud.miniecommerce.model.enums.goods.GoodsStatus;
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
-import java.math.BigDecimal;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import lombok.*;
 
 /**
  * @ClassName  ：Goods
  * @description：商品
  * @author     ：wxl
- * @date       ：2024/12/05 11:57
+ * @date       ：2024/12/08 02:56
  */
 @Data
 @AllArgsConstructor
@@ -24,8 +25,14 @@ import java.math.BigDecimal;
 @Schema(name="Goods",description="商品")
 public class Goods extends BaseEntity {
 
-    private static final long serialVersionUID = 358619939672836465L;
+    private static final long serialVersionUID = 128104212563452506L;
 
+    /**
+     * 商品编号
+     */     
+    @TableField(value="goods_no")
+    @Schema(name="goodsNo",description="商品编号")
+    private String goodsNo;
     /**
      * 商品名称
      */     
@@ -92,7 +99,6 @@ public class Goods extends BaseEntity {
     @TableField(value="status")
     @Schema(name="status",description="商品状态（0-下架、1-上架）")
     private GoodsStatus status;
-
 
 }
 

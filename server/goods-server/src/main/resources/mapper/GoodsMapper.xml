@@ -4,6 +4,7 @@
 
     <resultMap type="com.wxl.cloud.miniecommerce.model.entity.goods.Goods" id="GoodsMap">
         <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="goodsNo" column="goods_no" jdbcType="VARCHAR"/>
         <result property="goodsName" column="goods_name" jdbcType="VARCHAR"/>
         <result property="description" column="description" jdbcType="VARCHAR"/>
         <result property="goodsCode" column="goods_code" jdbcType="VARCHAR"/>

@@ -1,6 +1,5 @@
 package com.wxl.cloud.miniecommerce.goods.service;
 
-import com.wxl.cloud.miniecommerce.model.entity.goods.Goods;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 

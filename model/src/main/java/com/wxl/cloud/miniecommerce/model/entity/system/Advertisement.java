@@ -3,6 +3,7 @@ package com.wxl.cloud.miniecommerce.model.entity.system;
 import java.util.Date;
 
 import com.wxl.cloud.miniecommerce.model.entity.BaseEntity;
+import com.wxl.cloud.miniecommerce.model.enums.system.AdvertisementStatus;
 import io.swagger.v3.oas.annotations.media.Schema;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.baomidou.mybatisplus.annotation.TableId;
@@ -14,7 +15,7 @@ import lombok.*;
  * @ClassName  ：Advertisement
  * @description：广告
  * @author     ：wxl
- * @date       ：2024/12/07 16:05
+ * @date       ：2024/12/08 02:55
  */
 @Data
 @AllArgsConstructor
@@ -23,7 +24,7 @@ import lombok.*;
 @Schema(name="Advertisement",description="广告")
 public class Advertisement extends BaseEntity {
 
-    private static final long serialVersionUID = -87584391678141974L;
+    private static final long serialVersionUID = -59870055312082513L;
 
     /**
      * 商品id
@@ -31,6 +32,12 @@ public class Advertisement extends BaseEntity {
     @TableField(value="goods_id")
     @Schema(name="goodsId",description="商品id")
     private Long goodsId;
+    /**
+     * 商品编号
+     */     
+    @TableField(value="goods_no")
+    @Schema(name="goodsNo",description="商品编号")
+    private String goodsNo;
     /**
      * 商品名称
      */     
@@ -61,7 +68,12 @@ public class Advertisement extends BaseEntity {
     @TableField(value="index")
     @Schema(name="index",description="顺序")
     private Integer index;
-
+    /**
+     * 状态（0-未上线，1-已上线）
+     */     
+    @TableField(value="status")
+    @Schema(name="status",description="状态（0-未上线，1-已上线）")
+    private AdvertisementStatus status;
 
 }
 

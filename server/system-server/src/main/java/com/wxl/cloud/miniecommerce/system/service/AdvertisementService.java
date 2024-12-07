@@ -1,7 +1,6 @@
 package com.wxl.cloud.miniecommerce.system.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.wxl.cloud.miniecommerce.model.entity.system.Advertisement;
 
 
 /**
