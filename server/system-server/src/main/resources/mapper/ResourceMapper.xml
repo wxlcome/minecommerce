@@ -5,6 +5,7 @@
     <resultMap type="com.wxl.cloud.miniecommerce.model.entity.system.Resource" id="ResourceMap">
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="objectId" column="object_id" jdbcType="INTEGER"/>
+        <result property="objectType" column="object_type" jdbcType="INTEGER"/>
         <result property="resourceName" column="resource_name" jdbcType="VARCHAR"/>
         <result property="resourceType" column="resource_type" jdbcType="INTEGER"/>
         <result property="resourceUrl" column="resource_url" jdbcType="VARCHAR"/>

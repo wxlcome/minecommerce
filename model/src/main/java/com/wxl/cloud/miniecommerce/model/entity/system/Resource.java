@@ -1,19 +1,22 @@
 package com.wxl.cloud.miniecommerce.model.entity.system;
 
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableName;
+import java.util.Date;
+
 import com.wxl.cloud.miniecommerce.model.entity.BaseEntity;
+import com.wxl.cloud.miniecommerce.model.enums.system.ResourceObjectType;
 import com.wxl.cloud.miniecommerce.model.enums.system.ResourceType;
 import io.swagger.v3.oas.annotations.media.Schema;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import lombok.*;
 
 /**
  * @ClassName  ：Resource
  * @description：资源
  * @author     ：wxl
- * @date       ：2024/12/05 11:41
+ * @date       ：2024/12/08 13:23
  */
 @Data
 @AllArgsConstructor
@@ -22,7 +25,7 @@ import lombok.NoArgsConstructor;
 @Schema(name="Resource",description="资源")
 public class Resource extends BaseEntity {
 
-    private static final long serialVersionUID = -38902120643189385L;
+    private static final long serialVersionUID = 999947236582971404L;
 
     /**
      * 对象id
@@ -30,6 +33,12 @@ public class Resource extends BaseEntity {
     @TableField(value="object_id")
     @Schema(name="objectId",description="对象id")
     private Long objectId;
+    /**
+     * 对象类型
+     */     
+    @TableField(value="object_type")
+    @Schema(name="objectType",description="对象类型")
+    private ResourceObjectType objectType;
     /**
      * 资源名称
      */     
