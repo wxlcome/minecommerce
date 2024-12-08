@@ -1,4 +1,4 @@
-package com.wxl.cloud.miniecommerce.common.http;
+package com.wxl.cloud.miniecommerce.model.enums.http;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 import lombok.Getter;

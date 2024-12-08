@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
 import com.wxl.cloud.miniecommerce.common.exception.BizException;
 import com.wxl.cloud.miniecommerce.system.service.MinioService;
 import com.wxl.cloud.miniecommerce.system.service.OSSService;
-import com.wxl.cloud.miniecommerce.system.utils.http.SystemResultCodeEnum;
+import com.wxl.cloud.miniecommerce.system.enums.http.SystemResultCodeEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

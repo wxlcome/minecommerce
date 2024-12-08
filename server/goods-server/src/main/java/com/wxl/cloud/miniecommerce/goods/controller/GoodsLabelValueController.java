@@ -2,11 +2,8 @@ package com.wxl.cloud.miniecommerce.goods.controller;
 
 import com.wxl.cloud.miniecommerce.goods.service.GoodsLabelValueService;
 import com.wxl.cloud.miniecommerce.model.entity.goods.GoodsLabelValue;
-import com.wxl.cloud.miniecommerce.common.http.Result;
+import com.wxl.cloud.miniecommerce.model.enums.http.Result;
 import io.swagger.v3.oas.annotations.Operation;
-import io.swagger.v3.oas.annotations.Parameter;
-import io.swagger.v3.oas.annotations.enums.ParameterIn;
-import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

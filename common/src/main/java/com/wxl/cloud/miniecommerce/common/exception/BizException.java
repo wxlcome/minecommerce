@@ -1,7 +1,6 @@
 package com.wxl.cloud.miniecommerce.common.exception;
 
-import com.wxl.cloud.miniecommerce.common.http.BaseCodeEnum;
-import com.wxl.cloud.miniecommerce.common.http.ResultCodeEnum;
+import com.wxl.cloud.miniecommerce.model.enums.http.BaseCodeEnum;
 import lombok.Data;
 
 /**

@@ -7,6 +7,10 @@ import com.baomidou.mybatisplus.annotation.TableId;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.StringSerializer;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Data;
 
@@ -36,7 +40,6 @@ public abstract class BaseEntity implements Serializable {
     @TableField(value = "create_time",fill = FieldFill.INSERT)
     @Schema(name="createTime",description="创建时间",accessMode = Schema.AccessMode.READ_ONLY)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Date createTime;
     /**
      * 更新时间
@@ -44,7 +47,6 @@ public abstract class BaseEntity implements Serializable {
     @TableField(value = "update_time",fill = FieldFill.INSERT_UPDATE)
     @Schema(name="updateTime",description="更新时间",accessMode = Schema.AccessMode.READ_ONLY)
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone = "GMT+8")
-    @JsonProperty(access = JsonProperty.Access.READ_ONLY)
     private Date updateTime;
 
 

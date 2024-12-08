@@ -1,7 +1,9 @@
 package com.wxl.cloud.miniecommerce.system.controller;
 
-import com.wxl.cloud.miniecommerce.common.http.Result;
+import com.wxl.cloud.miniecommerce.common.pagefilter.system.AdvertisementPageFilter;
+import com.wxl.cloud.miniecommerce.model.enums.http.Result;
 import com.wxl.cloud.miniecommerce.model.entity.system.Advertisement;
+import com.wxl.cloud.miniecommerce.model.page.BasePage;
 import com.wxl.cloud.miniecommerce.system.service.AdvertisementService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -37,6 +39,12 @@ public class AdvertisementController {
     @GetMapping("list")
     public Result<List<Advertisement>> list(){
         return Result.ok(advertisementService.list());
+    }
+
+    @Operation(summary = "分页查询广告")
+    @PostMapping("page")
+    public Result<BasePage<Advertisement, AdvertisementPageFilter>> getPageByFilter(@RequestBody BasePage<Advertisement,AdvertisementPageFilter> page){
+        return Result.ok(advertisementService.getPageByFilter(page));
     }
     
     

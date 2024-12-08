@@ -1,8 +1,8 @@
 package com.wxl.cloud.miniecommerce.common.handler;
 
 import com.wxl.cloud.miniecommerce.common.exception.RPCException;
-import com.wxl.cloud.miniecommerce.common.http.Result;
-import com.wxl.cloud.miniecommerce.common.http.ResultCodeEnum;
+import com.wxl.cloud.miniecommerce.model.enums.http.Result;
+import com.wxl.cloud.miniecommerce.model.enums.http.ResultCodeEnum;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;

@@ -2,7 +2,7 @@ package com.wxl.cloud.miniecommerce.system.controller;
 
 import com.wxl.cloud.miniecommerce.system.service.OperationService;
 import com.wxl.cloud.miniecommerce.model.entity.system.Operation;
-import com.wxl.cloud.miniecommerce.common.http.Result;
+import com.wxl.cloud.miniecommerce.model.enums.http.Result;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

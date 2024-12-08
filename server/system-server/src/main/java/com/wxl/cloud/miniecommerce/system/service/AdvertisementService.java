@@ -1,7 +1,9 @@
 package com.wxl.cloud.miniecommerce.system.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
+import com.wxl.cloud.miniecommerce.common.pagefilter.system.AdvertisementPageFilter;
 import com.wxl.cloud.miniecommerce.model.entity.system.Advertisement;
+import com.wxl.cloud.miniecommerce.model.page.BasePage;
 
 
 /**
@@ -12,5 +14,11 @@ import com.wxl.cloud.miniecommerce.model.entity.system.Advertisement;
  */
 public interface AdvertisementService extends IService<Advertisement> {
 
+    /**
+     * @Description 分页查询广告
+     * @param page
+     * @return com.wxl.cloud.miniecommerce.system.dto.AdvertisementPage
+     */
+    BasePage<Advertisement,AdvertisementPageFilter> getPageByFilter(BasePage<Advertisement, AdvertisementPageFilter> page);
 }
 

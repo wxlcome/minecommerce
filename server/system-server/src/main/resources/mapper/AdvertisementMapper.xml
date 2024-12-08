@@ -12,10 +12,26 @@
         <result property="description" column="description" jdbcType="VARCHAR"/>
         <result property="descriptionColor" column="description_color" jdbcType="VARCHAR"/>
         <result property="ideaImg" column="idea_img" jdbcType="VARCHAR"/>
-        <result property="index" column="index" jdbcType="INTEGER"/>
+        <result property="adIndex" column="ad_index" jdbcType="INTEGER"/>
         <result property="status" column="status" jdbcType="INTEGER"/>
         <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
         <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
     </resultMap>
+
+    <select id="seletePageByFilter"  resultMap="AdvertisementMap">
+        select
+            id, goods_id,
+            goods_no,
+            goods_name,
+            title, title_color,
+            description,
+            description_color,
+            idea_img,
+            ad_index,
+            status,
+            update_time,
+            create_time
+        from tb_advertisement
+    </select>
 </mapper>
 

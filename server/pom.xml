@@ -37,13 +37,6 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
-        <!--数据模型-->
-        <dependency>
-            <groupId>com.wxl.cloud.miniecommerce</groupId>
-            <artifactId>model</artifactId>
-            <version>1.0-SNAPSHOT</version>
-        </dependency>
-
     </dependencies>
 
     <build>

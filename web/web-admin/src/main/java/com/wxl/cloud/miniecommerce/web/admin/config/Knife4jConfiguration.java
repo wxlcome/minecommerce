@@ -29,7 +29,7 @@ public class Knife4jConfiguration {
 
     @Bean
     public GroupedOpenApi loginAPI() {
-        return GroupedOpenApi.builder().group("后台管理").
+        return GroupedOpenApi.builder().group("default").
                 pathsToMatch(
                         "/admin/**"
                 ).

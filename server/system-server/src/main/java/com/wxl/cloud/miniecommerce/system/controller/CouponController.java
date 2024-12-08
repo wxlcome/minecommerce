@@ -1,6 +1,6 @@
 package com.wxl.cloud.miniecommerce.system.controller;
 
-import com.wxl.cloud.miniecommerce.common.http.Result;
+import com.wxl.cloud.miniecommerce.model.enums.http.Result;
 import com.wxl.cloud.miniecommerce.model.entity.system.Coupon;
 import com.wxl.cloud.miniecommerce.system.service.CouponService;
 import io.swagger.v3.oas.annotations.Operation;

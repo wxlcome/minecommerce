@@ -1,4 +1,4 @@
-package com.wxl.cloud.miniecommerce.model.enums;
+package com.wxl.cloud.miniecommerce.model.enums.http;
 
 /**
  * @InterfaceName  ：BaseEnum

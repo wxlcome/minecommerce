@@ -1,8 +1,5 @@
 package com.wxl.cloud.miniecommerce.system.aspect;
 
-import com.wxl.cloud.miniecommerce.common.exception.RPCException;
-import com.wxl.cloud.miniecommerce.common.http.Result;
-import com.wxl.cloud.miniecommerce.common.http.ResultCodeEnum;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
