@@ -1,1 +1,1 @@
-com.wxl.cloud.miniecommerce.gateway.sentinel.GatewayRuleCenterInitFunc
+com.wxl.cloud.miniecommerce.gateway.config.sentinel.GatewayRuleCenterInitFunc

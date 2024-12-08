@@ -1,5 +1,6 @@
 package com.wxl.cloud.miniecommerce.common.exception;
 
+import com.wxl.cloud.miniecommerce.common.http.BaseCodeEnum;
 import com.wxl.cloud.miniecommerce.common.http.ResultCodeEnum;
 import lombok.Data;
 
@@ -19,12 +20,12 @@ public class BizException extends RuntimeException {
         this.code = code;
     }
 
-    public BizException(ResultCodeEnum codeEnum) {
+    public BizException(BaseCodeEnum codeEnum) {
         super(codeEnum.getMessage());
         this.code = codeEnum.getCode();
     }
 
-    public BizException(ResultCodeEnum codeEnum, String msg) {
+    public BizException(BaseCodeEnum codeEnum, String msg) {
         super(msg);
         this.code = codeEnum.getCode();
     }

@@ -1,4 +1,4 @@
-package com.wxl.cloud.miniecommerce.gateway.sentinel;
+package com.wxl.cloud.miniecommerce.gateway.config.sentinel;
 
 import com.alibaba.csp.sentinel.adapter.gateway.common.api.ApiDefinition;
 import com.alibaba.csp.sentinel.adapter.gateway.common.api.GatewayApiDefinitionManager;

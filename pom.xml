@@ -102,6 +102,13 @@
                 <version>${knife4j.version}</version>
             </dependency>
 
+            <!--knife4j 网关聚合-->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-gateway-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+
             <!-- 自定义 skywalking 链路追踪-->
             <dependency>
                 <groupId>org.apache.skywalking</groupId>

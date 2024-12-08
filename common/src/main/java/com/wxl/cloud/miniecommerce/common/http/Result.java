@@ -32,7 +32,7 @@ public class Result<T> {
         return result;
     }
 
-    public static <T> Result<T> build(T body, ResultCodeEnum resultCodeEnum) {
+    public static <T> Result<T> build(T body, BaseCodeEnum resultCodeEnum) {
         Result<T> result = build(body);
         result.setCode(resultCodeEnum.getCode());
         result.setMessage(resultCodeEnum.getMessage());

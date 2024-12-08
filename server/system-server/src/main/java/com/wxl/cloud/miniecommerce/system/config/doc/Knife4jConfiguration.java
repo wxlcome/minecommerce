@@ -1,4 +1,4 @@
-package com.wxl.cloud.miniecommerce.system.config;
+package com.wxl.cloud.miniecommerce.system.config.doc;
 
 import io.swagger.v3.oas.models.OpenAPI;
 import io.swagger.v3.oas.models.info.Contact;
@@ -26,10 +26,9 @@ public class Knife4jConfiguration {
                         .description("系统服务API"));
     }
 
-
     @Bean
-    public GroupedOpenApi loginAPI() {
-        return GroupedOpenApi.builder().group("系统服务").
+    public GroupedOpenApi systemAPI() {
+        return GroupedOpenApi.builder().group("default").
                 pathsToMatch(
                         "/system/**"
                 ).

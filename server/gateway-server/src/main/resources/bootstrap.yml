@@ -1,6 +1,6 @@
 spring:
   application:
-    name: gateway-server # 服务名称
+    name: me-gateway # 服务名称
   cloud:
     nacos: # nacos 注册和配置中心
       server-addr: localhost:8848
@@ -13,10 +13,59 @@ spring:
         group: MINI_ECOMMERCE
         namespace: 9f14581e-8abd-4c47-8a9f-ca7801849a02
         file-extension: yaml
+        shared-configs:
+          - data-id: me-minio-config.yaml
+            group: MINI_ECOMMERCE
+
+    gateway: # 网关配置
+      routes: # 路由
+        - id: oss # 对象存储服务
+          uri: ${minio.endpoint}
+          predicates:
+              - Path=/oss/**
+          filters:
+              - StripPrefix=1
+
+        - id: me-system # 系统服务
+          uri: lb://me-system
+          predicates:
+            - Path=/system-server/**,/oss/**
+          filters:
+            - StripPrefix=1
 
 
-
-
-
-
+# knife4j的网关聚合配置 文档地址：http://{gateway.host}:{gateway.port}/doc.html
+knife4j:
+  # 聚合swagger文档
+  gateway:
+    # 是否开启Knife4j网关聚合功能(生产环境不建议开启)
+    enabled: true
+    # 排序规则(tag/operation排序自4.2.0版本新增)
+    # 取值：alpha-默认排序规则，官方swagger-ui默认实现,order-Knife4j提供的增强排序规则，开发者可扩展x-order，根据数值来自定义排序
+    tags-sorter: order
+    operations-sorter: order
+    # 指定聚合的策略(默认手动配置(manual)，服务发现(discover))
+    strategy: manual
+    discover:
+      # 是否开启服务发现模式的配置
+      enabled: false
+      # 指定版本号(swagger2|openapi3)
+      version: openapi3
+      # 需要排除的微服务(eg:网关服务)
+      excluded-services:
+        - me-gateway
+      # openapi3个性化配置
+      oas3:
+        url: /v3/api-docs?group=default
+    # 个性化定制的部分子服务分组情况
+    routes:
+      - name: 系统服务
+        # 服务名
+        service-name: system-server
+        # 真实子服务访问url地址-提供OpenAPI的文档
+        url: /system-server/v3/api-docs?group=default
+        # 路由前缀，兼容OpenAPI3规范在聚合时丢失contextPath属性的异常情况，由开发者自己配置contextPath,Knife4j的前端Ui做兼容处理,与url属性独立不冲突，仅OpenAPI3规范聚合需要，OpenAPI2规范不需要设置此属性,默认为(apiPathPrefix)
+        context-path: /system-server/
+        # 排序
+        order: 1
 

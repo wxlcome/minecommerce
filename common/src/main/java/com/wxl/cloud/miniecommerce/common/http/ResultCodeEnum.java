@@ -7,7 +7,7 @@ import lombok.Getter;
  * 统一返回结果状态信息类
  */
 @Getter
-public enum ResultCodeEnum {
+public enum ResultCodeEnum implements BaseCodeEnum {
 
     SUCCESS(200, "成功"),
     FAIL(201, "失败"),

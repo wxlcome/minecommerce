@@ -1,6 +1,6 @@
 spring:
   application:
-    name: system-server #服务名称
+    name: me-system #服务名称
   cloud:
     nacos: # nacos 注册和配置中心
       server-addr: localhost:8848
@@ -13,7 +13,9 @@ spring:
         group: MINI_ECOMMERCE
         namespace: 9f14581e-8abd-4c47-8a9f-ca7801849a02
         file-extension: yaml
-
+        shared-configs:
+          - data-id: me-minio-config.yaml
+            group: MINI_ECOMMERCE
 
 
 
