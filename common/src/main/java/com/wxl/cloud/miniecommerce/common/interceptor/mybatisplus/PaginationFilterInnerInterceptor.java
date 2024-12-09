@@ -1,5 +1,6 @@
 package com.wxl.cloud.miniecommerce.common.interceptor.mybatisplus;
 
+
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.core.toolkit.ObjectUtils;
 import com.baomidou.mybatisplus.core.toolkit.ParameterUtils;
@@ -115,13 +116,17 @@ public class PaginationFilterInnerInterceptor implements InnerInterceptor {
                 throw new RuntimeException(e);
             }
 
+
+            if(ObjectUtils.isEmpty(value))
+                continue;
+
             newSql.append(" and ("); //开始
             FilterField.CompareType compareType = entry.getValue().compareType(); //获取比较运算符
             String valueString = getValueString(value,compareType);
             String compareOptFormatter = null; //比较运算格式
             String formatter = entry.getValue().customFormatter();
             formatter = ObjectUtils.isEmpty(formatter) ? compareType.getFormatter() : formatter; //如果自定义格式为空，就使用默认格式
-            if (entry.getKey().getType() == String.class) { //如果是字符串类型，就添加单引号
+            if (entry.getKey().getType() == String.class ||entry.getKey().getType() == Date.class ) { //如果是字符串类型，就添加单引号
                 compareOptFormatter = compareType.getVal() + "'" + formatter + "'";
             } else
                 compareOptFormatter = compareType.getVal() + formatter;
@@ -160,6 +165,7 @@ public class PaginationFilterInnerInterceptor implements InnerInterceptor {
             checknAddWhere(sql, ++time);
         }
     }
+
 
     private String getValueString(Object value,FilterField.CompareType compareType)  {
 

@@ -1,9 +1,12 @@
 package com.wxl.cloud.miniecommerce.web.admin.service;
 
 import com.wxl.cloud.miniecommerce.common.pagefilter.system.AdvertisementPageFilter;
+import com.wxl.cloud.miniecommerce.model.entity.KeyValue;
 import com.wxl.cloud.miniecommerce.model.entity.system.Advertisement;
 import com.wxl.cloud.miniecommerce.model.page.BasePage;
 import com.wxl.cloud.miniecommerce.web.admin.vo.system.AdvertisementAdminVO;
+
+import java.util.List;
 
 /**
  * @InterfaceName  ：AdvertisementAdminService
@@ -39,4 +42,5 @@ public interface AdvertisementAdminService {
      * @param id
      */
     void deleteById(Long id);
+
 }

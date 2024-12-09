@@ -6,6 +6,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
+import com.wxl.cloud.miniecommerce.model.entity.system.Advertisement;
 import com.wxl.cloud.miniecommerce.model.enums.system.AdvertisementStatus;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.*;
@@ -81,8 +82,7 @@ public class AdvertisementAdminVO implements Serializable {
     /**
      * 状态（0-未上线，1-已上线）
      */
-    @JsonSerialize(using = ToStringSerializer.class)
-    private Integer status;
+    private AdvertisementStatus status;
 
     /**
      * 创建时间

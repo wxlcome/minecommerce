@@ -1,7 +1,11 @@
 package com.wxl.cloud.miniecommerce.system.controller;
 
-import com.wxl.cloud.miniecommerce.model.enums.http.Result;
+import com.wxl.cloud.miniecommerce.common.pagefilter.system.AdvertisementPageFilter;
+import com.wxl.cloud.miniecommerce.model.entity.system.Advertisement;
 import com.wxl.cloud.miniecommerce.model.entity.system.Coupon;
+import com.wxl.cloud.miniecommerce.model.enums.http.Result;
+import com.wxl.cloud.miniecommerce.model.page.BasePage;
+import com.wxl.cloud.miniecommerce.system.pagefilter.CouponPageFilter;
 import com.wxl.cloud.miniecommerce.system.service.CouponService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -38,8 +42,14 @@ public class CouponController {
     public Result<List<Coupon>> list(){
         return Result.ok(couponService.list());
     }
-    
-    
+
+    @Operation(summary = "分页查询优惠券")
+    @PostMapping("page")
+    public Result<BasePage<Coupon, CouponPageFilter>> getPageByFilter(@RequestBody BasePage<Coupon,CouponPageFilter> page){
+        return Result.ok(couponService.getPageByFilter(page));
+    }
+
+
     @Operation(summary = "保存或更新优惠券")
     @PostMapping("saveorupdate")
     public Result saveOrUpdate(@RequestBody Coupon dto){

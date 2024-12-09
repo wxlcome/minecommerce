@@ -4,13 +4,19 @@
 
     <resultMap type="com.wxl.cloud.miniecommerce.model.entity.system.Coupon" id="CouponMap">
         <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="goodsId" column="goods_id" jdbcType="INTEGER"/>
         <result property="couponName" column="coupon_name" jdbcType="VARCHAR"/>
         <result property="couponType" column="coupon_type" jdbcType="INTEGER"/>
-        <result property="goodsId" column="goods_id" jdbcType="INTEGER"/>
+        <result property="goodsNo" column="goods_no" jdbcType="VARCHAR"/>
+        <result property="goodsName" column="goods_name" jdbcType="VARCHAR"/>
         <result property="number" column="number" jdbcType="VARCHAR"/>
         <result property="status" column="status" jdbcType="INTEGER"/>
         <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
         <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
     </resultMap>
+
+    <select id="selectPageByFilter" resultMap="CouponMap">
+        select id, goods_id, goods_no, goods_name, coupon_name, coupon_type, number, status, update_time, create_time from tb_coupon
+    </select>
 </mapper>
 

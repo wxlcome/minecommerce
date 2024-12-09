@@ -3,6 +3,7 @@ package com.wxl.cloud.miniecommerce.web.admin.service.impl;
 import cn.hutool.core.bean.BeanUtil;
 import com.wxl.cloud.miniecommerce.common.api.system.AdvertisementFeignApi;
 import com.wxl.cloud.miniecommerce.common.pagefilter.system.AdvertisementPageFilter;
+import com.wxl.cloud.miniecommerce.model.entity.KeyValue;
 import com.wxl.cloud.miniecommerce.model.entity.system.Advertisement;
 import com.wxl.cloud.miniecommerce.model.page.BasePage;
 import com.wxl.cloud.miniecommerce.web.admin.service.AdvertisementAdminService;
@@ -10,6 +11,8 @@ import com.wxl.cloud.miniecommerce.web.admin.vo.system.AdvertisementAdminVO;
 import io.seata.spring.annotation.GlobalTransactional;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 /**
  * @ClassName  ：AdvertisementAdminServiceImpl
@@ -54,4 +57,5 @@ public class AdvertisementAdminServiceImpl implements AdvertisementAdminService 
     public void deleteById(Long id) {
         advertisementFeignApi.deleteById(id);
     }
+
 }

@@ -1,6 +1,8 @@
 package com.wxl.cloud.miniecommerce.common.api.system;
 
 import com.wxl.cloud.miniecommerce.common.pagefilter.system.AdvertisementPageFilter;
+import com.wxl.cloud.miniecommerce.model.entity.KeyValue;
+import com.wxl.cloud.miniecommerce.model.entity.system.Coupon;
 import com.wxl.cloud.miniecommerce.model.enums.http.Result;
 import com.wxl.cloud.miniecommerce.model.entity.system.Advertisement;
 import com.wxl.cloud.miniecommerce.model.page.BasePage;
@@ -8,13 +10,15 @@ import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 /**
  * @InterfaceName  ：AdvertisementFeignApi
  * @description    ：自定义接口
  * @author         ：wxl
  * @date           ：2024/12/08 21:47
  */
-@FeignClient(name = "me-system", path = "/system/advertisement")
+@FeignClient(name = "me-system", path = "/system/advertisement",contextId = "advertisement")
 public interface AdvertisementFeignApi {
 
 

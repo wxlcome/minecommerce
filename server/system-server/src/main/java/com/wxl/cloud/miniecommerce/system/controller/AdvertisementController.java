@@ -1,6 +1,7 @@
 package com.wxl.cloud.miniecommerce.system.controller;
 
 import com.wxl.cloud.miniecommerce.common.pagefilter.system.AdvertisementPageFilter;
+import com.wxl.cloud.miniecommerce.model.entity.KeyValue;
 import com.wxl.cloud.miniecommerce.model.enums.http.Result;
 import com.wxl.cloud.miniecommerce.model.entity.system.Advertisement;
 import com.wxl.cloud.miniecommerce.model.page.BasePage;
@@ -62,6 +63,7 @@ public class AdvertisementController {
         advertisementService.removeById(id);
         return Result.ok();
     }
+
 
 }
 
