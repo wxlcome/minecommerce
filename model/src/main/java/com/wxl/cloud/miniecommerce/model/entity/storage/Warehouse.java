@@ -25,6 +25,8 @@ public class Warehouse extends BaseEntity {
 
     private static final long serialVersionUID = -15899744366606395L;
 
+
+
     /**
      * 仓库名称
      */     

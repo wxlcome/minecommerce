@@ -7,7 +7,7 @@ import com.alibaba.csp.sentinel.slots.block.flow.FlowException;
 import com.alibaba.csp.sentinel.slots.block.flow.param.ParamFlowException;
 import com.wxl.cloud.miniecommerce.common.exception.BizException;
 import com.wxl.cloud.miniecommerce.common.exception.RPCException;
-import com.wxl.cloud.miniecommerce.model.enums.http.Result;
+import com.wxl.cloud.miniecommerce.common.util.http.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;

@@ -1,12 +1,16 @@
 package com.wxl.cloud.miniecommerce.model.entity.system;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.wxl.cloud.miniecommerce.model.entity.BaseEntity;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+
+import java.io.Serializable;
 
 /**
  * @ClassName  ：DistrictInfo
@@ -19,10 +23,16 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @TableName("tb_district_info")
 @Schema(name="DistrictInfo",description="")
-public class DistrictInfo extends BaseEntity {
+public class DistrictInfo implements Serializable {
 
     private static final long serialVersionUID = -33294446480881965L;
 
+    /**
+     * 数据行id
+     */
+    @TableId(value = "id",type = IdType.ASSIGN_ID)
+    @Schema(name="id",description="数据行id")
+    private Long id;
      
     @TableField(value="name")
     @Schema(name="name",description="${column.comment}")

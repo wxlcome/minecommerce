@@ -8,8 +8,6 @@
         <result property="code" column="code" jdbcType="VARCHAR"/>
         <result property="icon" column="icon" jdbcType="VARCHAR"/>
         <result property="paymentType" column="payment_type" jdbcType="INTEGER"/>
-        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
-        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 </mapper>
 

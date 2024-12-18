@@ -1,15 +1,13 @@
 package com.wxl.cloud.miniecommerce.model.entity.system;
 
-import java.util.Date;
+
 
 import com.wxl.cloud.miniecommerce.model.entity.BaseEntity;
-import com.wxl.cloud.miniecommerce.model.enums.system.ResourceObjectType;
+import com.wxl.cloud.miniecommerce.model.enums.system.ObjectType;
 import com.wxl.cloud.miniecommerce.model.enums.system.ResourceType;
 import io.swagger.v3.oas.annotations.media.Schema;
 import com.baomidou.mybatisplus.annotation.TableName;
-import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.FieldFill;
 import lombok.*;
 
 /**
@@ -38,7 +36,7 @@ public class Resource extends BaseEntity {
      */     
     @TableField(value="object_type")
     @Schema(name="objectType",description="对象类型")
-    private ResourceObjectType objectType;
+    private ObjectType objectType;
     /**
      * 资源名称
      */     

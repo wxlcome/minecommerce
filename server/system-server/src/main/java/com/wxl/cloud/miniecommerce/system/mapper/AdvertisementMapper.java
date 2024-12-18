@@ -1,9 +1,9 @@
 package com.wxl.cloud.miniecommerce.system.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.wxl.cloud.miniecommerce.common.pagefilter.system.AdvertisementPageFilter;
 import com.wxl.cloud.miniecommerce.model.entity.system.Advertisement;
-import com.wxl.cloud.miniecommerce.model.page.BasePage;
+import com.wxl.cloud.miniecommerce.common.util.mybatisplus.BasePage;
+import com.wxl.cloud.miniecommerce.system.pagefilter.AdvertisementAdminPageFilter;
 import org.apache.ibatis.annotations.Mapper;
 
 
@@ -21,6 +21,6 @@ public interface AdvertisementMapper extends BaseMapper<Advertisement> {
      * @param page
      * @return com.wxl.cloud.miniecommerce.system.dto.AdvertisementPage
      */
-    BasePage<Advertisement, AdvertisementPageFilter> seletePageByFilter(BasePage<Advertisement, AdvertisementPageFilter> page);
+    BasePage<Advertisement, AdvertisementAdminPageFilter> seletePageByFilter(BasePage<Advertisement, AdvertisementAdminPageFilter> page);
 }
 

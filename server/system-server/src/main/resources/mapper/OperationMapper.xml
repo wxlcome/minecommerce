@@ -5,7 +5,9 @@
     <resultMap type="com.wxl.cloud.miniecommerce.model.entity.system.Operation" id="OperationMap">
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="title" column="title" jdbcType="VARCHAR"/>
+        <result property="titleColor" column="title_color" jdbcType="VARCHAR"/>
         <result property="description" column="description" jdbcType="VARCHAR"/>
+        <result property="descriptionColor" column="description_color" jdbcType="VARCHAR"/>
         <result property="ideaImg" column="idea_img" jdbcType="VARCHAR"/>
         <result property="operationType" column="operation_type" jdbcType="INTEGER"/>
         <result property="param" column="param" jdbcType="VARCHAR"/>
@@ -15,5 +17,11 @@
         <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
         <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
     </resultMap>
+
+    <select id="selectPageByFilter" resultMap="OperationMap">
+        select id, title, title_color, description, description_color, idea_img, operation_type, param, start_time, end_time, status, update_time, create_time from tb_operation
+    </select>
+
+
 </mapper>
 

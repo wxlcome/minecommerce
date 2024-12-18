@@ -4,6 +4,8 @@ import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.fasterxml.jackson.databind.ser.std.ToStringSerializer;
 import com.wxl.cloud.miniecommerce.model.entity.BaseEntity;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
@@ -32,18 +34,21 @@ public class OperationGoods extends BaseEntity {
      */     
     @TableId("id")
     @Schema(name="id",description="数据编号")
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long id;
     /**
      * 活动id
      */     
     @TableField(value="operation_id")
     @Schema(name="operationId",description="活动id")
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long operationId;
     /**
      * 商品id
      */     
     @TableField(value="goods_id")
     @Schema(name="goodsId",description="商品id")
+    @JsonSerialize(using = ToStringSerializer.class)
     private Long goodsId;
     /**
      * 商品名称
@@ -57,14 +62,7 @@ public class OperationGoods extends BaseEntity {
     @TableField(value="low_price")
     @Schema(name="lowPrice",description="最低单价")
     private BigDecimal lowPrice;
-     
-    @TableField(value="update_time")
-    @Schema(name="updateTime",description="${column.comment}")
-    private Date updateTime;
-     
-    @TableField(value="create_time",fill = FieldFill.INSERT)
-    @Schema(name="createTime",description="${column.comment}")
-    private Date createTime;
+
 
 }
 

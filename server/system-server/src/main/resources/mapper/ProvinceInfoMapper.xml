@@ -5,8 +5,6 @@
     <resultMap type="com.wxl.cloud.miniecommerce.model.entity.system.ProvinceInfo" id="ProvinceInfoMap">
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="name" column="name" jdbcType="VARCHAR"/>
-        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
-        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
     </resultMap>
 </mapper>
 

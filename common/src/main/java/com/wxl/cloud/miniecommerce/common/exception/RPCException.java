@@ -1,7 +1,7 @@
 package com.wxl.cloud.miniecommerce.common.exception;
 
 
-import com.wxl.cloud.miniecommerce.model.enums.http.ResultCodeEnum;
+import com.wxl.cloud.miniecommerce.common.util.http.ResultCodeEnum;
 
 /**
  * @ClassName  ：RPCException

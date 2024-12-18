@@ -5,17 +5,23 @@
     <resultMap type="com.wxl.cloud.miniecommerce.model.entity.system.ExpressInfo" id="ExpressInfoMap">
         <result property="id" column="id" jdbcType="INTEGER"/>
         <result property="objectId" column="object_id" jdbcType="INTEGER"/>
+        <result property="objectType" column="object_type" jdbcType="INTEGER"/>
         <result property="expressNo" column="express_no" jdbcType="VARCHAR"/>
         <result property="companyId" column="company_id" jdbcType="INTEGER"/>
         <result property="companyName" column="company_name" jdbcType="VARCHAR"/>
         <result property="companyCode" column="company_code" jdbcType="VARCHAR"/>
         <result property="companyIcon" column="company_icon" jdbcType="VARCHAR"/>
         <result property="expressType" column="express_type" jdbcType="INTEGER"/>
-        <result property="receiverAddrId" column="receiver_addr_id" jdbcType="INTEGER"/>
-        <result property="senderAddrId" column="sender_addr_id" jdbcType="INTEGER"/>
+        <result property="expressAddrId" column="express_addr_id" jdbcType="INTEGER"/>
         <result property="warehouseId" column="warehouse_id" jdbcType="INTEGER"/>
+        <result property="warehouseName" column="warehouse_name" jdbcType="VARCHAR"/>
+        <result property="status" column="status" jdbcType="INTEGER"/>
         <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
         <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
     </resultMap>
+
+    <select id="selectPageByFilter" resultMap="ExpressInfoMap">
+        select id, object_id, object_type, express_no, company_id, company_name, company_code, company_icon, express_type, express_addr_id, warehouse_id, warehouse_name, status, update_time, create_time from tb_express_info
+    </select>
 </mapper>
 

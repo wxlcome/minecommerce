@@ -2,7 +2,7 @@ package com.wxl.cloud.miniecommerce.account.controller;
 
 import com.wxl.cloud.miniecommerce.account.service.AccountPaymethodService;
 import com.wxl.cloud.miniecommerce.model.entity.account.AccountPaymethod;
-import com.wxl.cloud.miniecommerce.model.enums.http.Result;
+import com.wxl.cloud.miniecommerce.common.util.http.Result;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;

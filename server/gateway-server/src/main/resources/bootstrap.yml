@@ -36,13 +36,6 @@ spring:
           filters:
               - StripPrefix=1
 
-        - id: me-web-admin # web后台管理
-          uri: lb://me-web-admin
-          predicates:
-            - Path=/web-admin/**
-          filters:
-            - StripPrefix=1
-
         - id: me-system # 系统服务
           uri: lb://me-system
           predicates:
@@ -76,12 +69,6 @@ knife4j:
         url: /v3/api-docs?group=default
     # 个性化定制的部分子服务分组情况
     routes:
-      - name: web后台管理
-        service-name: web-admin
-        url: /web-admin/v3/api-docs?group=default
-        context-path: /web-admin/
-        order: 1
-
       - name: 系统服务
         # 服务名
         service-name: system-server

@@ -1,14 +1,11 @@
 package com.wxl.cloud.miniecommerce.system.service;
 
-import cn.hutool.db.Entity;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.wxl.cloud.miniecommerce.common.pagefilter.system.AdvertisementPageFilter;
-import com.wxl.cloud.miniecommerce.model.entity.KeyValue;
 import com.wxl.cloud.miniecommerce.model.entity.system.Advertisement;
-import com.wxl.cloud.miniecommerce.model.page.BasePage;
-
-import java.util.List;
-import java.util.Map;
+import com.wxl.cloud.miniecommerce.common.util.mybatisplus.BasePage;
+import com.wxl.cloud.miniecommerce.system.pagefilter.AdvertisementAdminPageFilter;
+import com.wxl.cloud.miniecommerce.system.vo.admin.AdvertisementAdminPageVO;
+import com.wxl.cloud.miniecommerce.system.vo.admin.AdvertisementAdminVO;
 
 
 /**
@@ -20,11 +17,28 @@ import java.util.Map;
 public interface AdvertisementService extends IService<Advertisement> {
 
     /**
+     * @Description 获取广告管理VO
+     * @param id
+     * @return com.wxl.cloud.miniecommerce.system.vo.admin.AdvertisementAdminVO
+     */
+    AdvertisementAdminVO getAdminVOById(Long id);
+
+    /**
+     * @Description 获取广告管理分页器
+     * @param page
+     * @return com.wxl.cloud.miniecommerce.common.util.mybatisplus.BasePage<com.wxl.cloud.miniecommerce.system.vo.admin.AdvertisementAdminVO,com.wxl.cloud.miniecommerce.system.pagefilter.AdvertisementAdminPageFilter>
+     */
+    BasePage<AdvertisementAdminPageVO, AdvertisementAdminPageFilter> getAdminPageByFilter(BasePage<Advertisement, AdvertisementAdminPageFilter> page);
+
+
+    /**
      * @Description 分页查询广告
      * @param page
      * @return com.wxl.cloud.miniecommerce.system.dto.AdvertisementPage
      */
-    BasePage<Advertisement,AdvertisementPageFilter> getPageByFilter(BasePage<Advertisement, AdvertisementPageFilter> page);
+    BasePage<Advertisement, AdvertisementAdminPageFilter> getPageByFilter(BasePage<Advertisement, AdvertisementAdminPageFilter> page);
+
+
 
 }
 

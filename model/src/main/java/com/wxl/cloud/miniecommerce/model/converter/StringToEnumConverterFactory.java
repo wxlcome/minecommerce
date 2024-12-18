@@ -1,6 +1,6 @@
 package com.wxl.cloud.miniecommerce.model.converter;
 
-import com.wxl.cloud.miniecommerce.model.enums.http.BaseEnum;
+import com.wxl.cloud.miniecommerce.model.enums.BaseEnum;
 import org.springframework.core.convert.converter.Converter;
 import org.springframework.core.convert.converter.ConverterFactory;
 

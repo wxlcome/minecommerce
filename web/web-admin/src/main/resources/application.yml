@@ -1,9 +1,0 @@
-server:
-  port: 10066
-
-spring:
-  profiles:
-    active: dev
-
-
-

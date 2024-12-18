@@ -10,5 +10,8 @@
         <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
         <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
     </resultMap>
+    <select id="selectPageByFilter" resultMap="FeedbackMap">
+        select id, email, subject, content, update_time, create_time from tb_feedback
+    </select>
 </mapper>
 

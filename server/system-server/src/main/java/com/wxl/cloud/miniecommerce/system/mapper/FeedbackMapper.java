@@ -1,7 +1,9 @@
 package com.wxl.cloud.miniecommerce.system.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.wxl.cloud.miniecommerce.common.util.mybatisplus.BasePage;
 import com.wxl.cloud.miniecommerce.model.entity.system.Feedback;
+import com.wxl.cloud.miniecommerce.system.pagefilter.FeedbackAdminPageFilter;
 import org.apache.ibatis.annotations.Mapper;
 
 
@@ -14,5 +16,6 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface FeedbackMapper extends BaseMapper<Feedback> {
 
+    BasePage<Feedback, FeedbackAdminPageFilter> selectPageByFilter(BasePage<Feedback, FeedbackAdminPageFilter> page);
 }
 

@@ -2,7 +2,7 @@ package com.wxl.cloud.miniecommerce.model.enums.goods;
 
 import com.baomidou.mybatisplus.annotation.EnumValue;
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.wxl.cloud.miniecommerce.model.enums.http.BaseEnum;
+import com.wxl.cloud.miniecommerce.model.enums.BaseEnum;
 import lombok.Getter;
 
 import java.util.Arrays;

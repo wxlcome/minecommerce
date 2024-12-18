@@ -1,7 +1,7 @@
 package com.wxl.cloud.miniecommerce.system.enums.http;
 
 import com.fasterxml.jackson.annotation.JsonValue;
-import com.wxl.cloud.miniecommerce.model.enums.http.BaseCodeEnum;
+import com.wxl.cloud.miniecommerce.common.util.http.BaseCodeEnum;
 import lombok.Getter;
 
 /**
